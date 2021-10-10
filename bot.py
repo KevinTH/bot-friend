@@ -1,4 +1,5 @@
 import discord
+from boto.s3.connection import S3Connection
 
 client = discord.Client()
 
@@ -14,4 +15,4 @@ async def on_message(message):
     if message.content.startswith('$world'):
         await message.channel.send('World!')
 
-client.run(ODk2NTA3NzQzMjg3MDA5MzEx.YWIH5g.gRpFiq0E82Rog6XEj5zHoPvXF1w)
+client.run(os.getenv('TOKEN'))
